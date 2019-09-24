@@ -2,7 +2,7 @@
 
 .homebanner {
     font-family: 'Open Sans', sans-serif;
-    color: rgb(192, 43, 43);
+    color: #673ab7;
     text-decoration: none;
     text-transform: capitalize;
     text-align: center;
@@ -10,10 +10,15 @@
     font-weight: 800;
     letter-spacing: -3px;
     line-height: 1;
-    text-shadow: #EDEDED 3px 2px 0;
+    
     position: relative;
     margin-top: 20%;
     }
 
     
+  .hero{
+    background-size: cover;
+    background-position: center center;
+  }
+
   

@@ -1,0 +1,35 @@
+// CSS Reset, comment out if not required or using a different module
+// @import '~minireset.css/minireset';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~igniteui-angular/lib/core/styles/themes/index';
+@include igx-core();
+@include igx-theme($default-palette);
+
+
+
+.sample-content {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0;
+    -webkit-animation: fade-in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -moz-animation: fade-in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.sample-column {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 50%;
+    align-content: flex-start;
+    margin: 16px;
+    min-width: 400px;
+    padding-left: 90px;
+}
+
+
+
+
+
+

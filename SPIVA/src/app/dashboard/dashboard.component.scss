@@ -1,0 +1,16 @@
+.card-wrapper {
+    max-width: 400px;
+    min-width: 250px;
+}
+
+.sample-wrapper--cards .igx-list {
+    width: 100%;
+    height: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.sample-wrapper--cards .igx-list.show {
+    width: 100%;
+    height: 290px;
+}
+
