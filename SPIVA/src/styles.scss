@@ -1,6 +1,6 @@
 // CSS Reset, comment out if not required or using a different module
 // @import '~minireset.css/minireset';
-@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-theme($default-palette);

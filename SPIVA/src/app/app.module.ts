@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IgxAvatarModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxDividerModule, IgxRippleModule, IgxChipsModule, IgxSliderModule, IgxListModule, IgxExpansionPanelModule } from "igniteui-angular";
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,8 @@ import { IgxAvatarModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxDivi
     IgxChipsModule,
     IgxSliderModule,
     IgxListModule,
-    IgxExpansionPanelModule
+    IgxExpansionPanelModule,
+    MDBBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
