@@ -8,14 +8,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { IgxAvatarModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxDividerModule, IgxRippleModule, IgxChipsModule, IgxSliderModule, IgxListModule, IgxExpansionPanelModule } from "igniteui-angular";
+import { IgxAvatarModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxDividerModule, IgxRippleModule, IgxChipsModule,
+   IgxSliderModule, IgxListModule, IgxExpansionPanelModule,IgxInputGroupModule } from "igniteui-angular";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +35,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     IgxSliderModule,
     IgxListModule,
     IgxExpansionPanelModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    IgxInputGroupModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents :[LoginComponent]
 })
 export class AppModule {
 }
