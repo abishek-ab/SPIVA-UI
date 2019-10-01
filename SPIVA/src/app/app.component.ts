@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'SPIVA';
   getUrl()
   {
-    return "url('http://www.sclance.com/pngs/white-clouds-png/white_clouds_png_1506971.jpg')";
+    return "url('https://ak4.picdn.net/shutterstock/videos/3189244/thumb/1.jpg')";
   }
   
 }
