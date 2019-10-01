@@ -9,16 +9,20 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IgxAvatarModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxDividerModule, IgxRippleModule, IgxChipsModule,
-   IgxSliderModule, IgxListModule, IgxExpansionPanelModule,IgxInputGroupModule } from "igniteui-angular";
+   IgxSliderModule, IgxListModule, IgxExpansionPanelModule,IgxInputGroupModule,IgxGridModule,IgxExcelExporterService, IgxCsvExporterService, IgxDialogModule  } from "igniteui-angular";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,13 @@ import { LoginComponent } from './login/login.component';
     IgxListModule,
     IgxExpansionPanelModule,
     MDBBootstrapModule,
-    IgxInputGroupModule
+    IgxInputGroupModule,
+    FormsModule,
+    IgxGridModule,
+    IgxDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [IgxExcelExporterService, IgxCsvExporterService],
   bootstrap: [AppComponent],
   entryComponents :[LoginComponent]
 })

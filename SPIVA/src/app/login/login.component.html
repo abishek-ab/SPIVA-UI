@@ -9,18 +9,18 @@
                         <igx-icon>person</igx-icon>
                     </igx-prefix>
                     <label igxLabel for="username">Username</label>
-                    <input igxInput id="username" type="text" />
+                    <input igxInput id="username" type="text" [(ngModel)]="username"/>
                 </igx-input-group>
                 <igx-input-group>
                     <igx-prefix>
                         <igx-icon>lock</igx-icon>
                     </igx-prefix>
                     <label igxLabel>Password</label>
-                    <input igxInput id="password" type="password" />
+                    <input igxInput id="password" type="password" [(ngModel)]="password"/>
                 </igx-input-group>
                 <br><br>
                 <button igxButton (click)="openLink()">Cancel</button>
-                <button igxButton >SignIn</button>
+                <button igxButton (click)="onLogin()">SignIn</button>
             </div>
         </div>
         <div class="row">

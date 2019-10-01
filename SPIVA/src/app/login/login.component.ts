@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,18 @@ import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  username;
+  password;
 
-  constructor(private _bottomSheetRef: MatBottomSheetRef<LoginComponent>) {}
+  constructor(private _bottomSheetRef: MatBottomSheetRef<LoginComponent>,private router:Router) {}
   
-    openLink(event: MouseEvent): void {
+    openLink(): void {
       this._bottomSheetRef.dismiss();
-     // event.preventDefault();
+    }
+
+    onLogin(){
+      this._bottomSheetRef.dismiss();
+      this.router.navigateByUrl("/home");
     }
 
     
