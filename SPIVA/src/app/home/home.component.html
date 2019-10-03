@@ -41,7 +41,7 @@
             </igx-column>
     </igx-grid>
     <br>
-    <button mat-button (click)="onSave()" style="background-color: #673ab7;color:white" class="float-right">Save</button>
+    <button mat-button (click)="openSnackBar('Changes saved successfully !')" style="background-color: #673ab7;color:white" class="float-right">Save</button>
 </div>
 <br>
 <br>
@@ -50,7 +50,7 @@
 <br>
 <br>
 <igx-dialog #dialogAdd title="New Employee" [rightButtonLabel]="'Add'" [leftButtonLabel]="'Cancel'" (onLeftButtonSelect)="cancel()"
-    (onRightButtonSelect)="addRow()">
+    (onRightButtonSelect)="addRow('Added successfully !')">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">

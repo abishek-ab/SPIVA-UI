@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxGridComponent, IgxDialogComponent } from 'igniteui-angular';
 import { HttpClient } from '@angular/common/http';
 import { EmployeeserviceService } from 'src/app/services/employeeservice.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   newEmployee:Employee;
   temp:Employee[];
 
-  constructor(public employeeService:EmployeeserviceService) { }
+  constructor(public employeeService:EmployeeserviceService,private snackBar:MatSnackBar) { }
 
   ngOnInit() {
     this.loadAllEmployees();
@@ -46,15 +47,18 @@ export class HomeComponent implements OnInit {
     this.newEmployee=new Employee(0,'','');
   }
 
-  addRow(){
+  addRow(message){
     console.log(this.newEmployee);
     this.employeeService.addNewEmployee(new Employee(0,this.newEmployee.firstName,this.newEmployee.department)).subscribe(
       (data)=>console.log(data)
     );
-    
+    this.loadAllEmployees();
     this.dialog.close();
     this.newEmployee=new Employee(0,'','');
-    this.loadAllEmployees();
+    this.snackBar.open(message, '', {
+      duration: 2000,
+      verticalPosition: 'top',
+    });
   }
 
   public removeRow(rowIndex) {
@@ -65,6 +69,13 @@ export class HomeComponent implements OnInit {
     );
     row.delete();
  }
+ openSnackBar(message) {
+   this.onSave();
+  this.snackBar.open(message, '', {
+    duration: 2000,
+    verticalPosition: 'top',
+  });
+}
 
 }
 

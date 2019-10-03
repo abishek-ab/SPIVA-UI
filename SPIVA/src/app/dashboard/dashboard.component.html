@@ -1,4 +1,5 @@
-<div class="container">
+<br><br>
+
     <div class="row">
         <div class="col-sm-12">
             <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
@@ -9,8 +10,8 @@
                         <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
                     </div>
                     <div class="carousel-caption">
-                        <h3 class="h3-responsive">Manage Employee Details</h3>
-                        <p>Manage all our employee details.</p>
+                        <!-- <h3 class="h3-responsive">Manage Employee Details</h3> -->
+                     <h4 style="color:white">Manage Employee Details</h4>
                     </div>
                 </mdb-carousel-item>
                 <mdb-carousel-item>
@@ -19,8 +20,8 @@
                         <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
                     </div>
                     <div class="carousel-caption">
-                        <h3 class="h3-responsive">Successful!</h3>
-                        <p>Ranked Top among Fortune 500 Companies.</p>
+                        <!-- <h3 class="h3-responsive">Successful!</h3> -->
+                        <h4 style="color:white">Successful !</h4>
                     </div>
                 </mdb-carousel-item>
                 <mdb-carousel-item>
@@ -29,73 +30,14 @@
                         <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
                     </div>
                     <div class="carousel-caption">
-                        <h3 class="h3-responsive">SPIVA Careers</h3>
-                        <p>Join Us!</p>
+                        <!-- <h3 class="h3-responsive">SPIVA Careers</h3> -->
+                        <h4 style="color:white">SPIVA Careers</h4>
                     </div>
                 </mdb-carousel-item>
             </mdb-carousel>
         </div>
     </div>
-</div>
+
 <br>
-
-<div class="container">
-    <div class="row">
-        <section class="sample-content">
-            <div class="col-md-4">
-                <article class="card-wrapper">
-
-                    <igx-card style="height: 500px;size: 20%">
-                        <igx-card-media>
-                            <img [src]="card.imageUrl">
-                        </igx-card-media>
-
-                        <igx-card-header>
-                            <h3 igxCardHeaderTitle>Give us Feedback</h3>
-                            <h5 igxCardHeaderSubtitle>Your feedback helps us a lot.</h5>
-                        </igx-card-header>
-
-                        <igx-card-content>
-                            <p>Please provide us feedback about our page and how to improve our services more.</p>
-                        </igx-card-content>
-
-                        <igx-card-actions>
-                            <button igxButton igxRipple *ngFor="let button of card.buttons">{{ button }}</button>
-                            <button igxButton="icon" igxRipple igxRippleCentered="true" *ngFor="let icon of card.icons">
-                                <igx-icon>{{icon}}</igx-icon>
-                            </button>
-                        </igx-card-actions>
-
-                    </igx-card>
-                </article>
-            </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <article class=" card-wrapper">
-                    <igx-card style="max-height: 50%">
-                        <igx-card-header>
-                            <igx-avatar src="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg" roundShape="true"></igx-avatar>
-                            <h4 igxCardHeaderTitle>Abishek Raju</h4>
-                            <h5 igxCardHeaderSubtitle>Full Stack Developer</h5>
-                        </igx-card-header>
-
-                        <igx-card-media>
-                            <img src="https://2pobaduekzw9jt9a-zippykid.netdna-ssl.com/wp-content/uploads/2017/01/elon-musk.jpg">
-                        </igx-card-media>
-
-                        <igx-card-content>
-                            <p>Having more than 2 years of experience in Full stack developemt with hands-on in Spring boot
-                                and Angular.</p>
-                        </igx-card-content>
-
-                        <igx-card-actions>
-                            <button igxButton>Like</button>
-                            <button igxButton>Share</button>
-                        </igx-card-actions>
-                    </igx-card>
-                </article>
-            </div>
-        </section>
-    </div>
-</div>
+<app-dashboard-tabs></app-dashboard-tabs>
 <br>

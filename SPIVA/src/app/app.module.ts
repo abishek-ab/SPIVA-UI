@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ButtonsModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
+import { DashboardTabsComponent } from './dashboard/dashboard-tabs/dashboard-tabs.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     IgxGridModule,
     IgxDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonsModule, 
+    WavesModule, 
+    CardsModule
   ],
   providers: [IgxExcelExporterService, IgxCsvExporterService],
   bootstrap: [AppComponent],
