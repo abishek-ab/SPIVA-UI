@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   @ViewChild("gridRowEdit", { read: IgxGridComponent,static:true }) public gridRowEdit: IgxGridComponent;
   @ViewChild("dialogAdd",{static:true}) public dialog:IgxDialogComponent;
 
-  employee:Employee[];
+  employee:Employee[]=[];
   newEmployee:Employee;
   temp:Employee[];
 
@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadAllEmployees(){
+    this.employee=[];
     this.employeeService.getEmployees().subscribe(
       (data:Employee[])=>{
         console.log(data);
@@ -50,9 +51,10 @@ export class HomeComponent implements OnInit {
   addRow(message){
     console.log(this.newEmployee);
     this.employeeService.addNewEmployee(new Employee(0,this.newEmployee.firstName,this.newEmployee.department)).subscribe(
-      (data)=>console.log(data)
+      (data:Employee[])=>{
+        this.loadAllEmployees();
+      }
     );
-    this.loadAllEmployees();
     this.dialog.close();
     this.newEmployee=new Employee(0,'','');
     this.snackBar.open(message, '', {
