@@ -4,6 +4,11 @@
     </span>
     
     <span class="filler"></span>
+    <div *ngIf="!loginStatus; else logout;">
     <button mat-raised-button (click)="openBottomSheet()">LogIn</button>&nbsp;&nbsp;
     <button mat-raised-button (click)="openBottomSheet()">Signup</button>&nbsp;&nbsp;
+</div>
+<ng-template #logout>
+        <button mat-raised-button (click)="onLogOut()">Logout</button>&nbsp;&nbsp;
+</ng-template>
 </mat-toolbar>

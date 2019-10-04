@@ -17,6 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonsModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
 import { DashboardTabsComponent } from './dashboard/dashboard-tabs/dashboard-tabs.component'
+import { AuthGuardService } from 'src/app/auth/auth-guard.service';
+import { AuthServiceService } from 'src/app/auth/auth-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,7 @@ import { DashboardTabsComponent } from './dashboard/dashboard-tabs/dashboard-tab
     WavesModule, 
     CardsModule
   ],
-  providers: [IgxExcelExporterService, IgxCsvExporterService],
+  providers: [IgxExcelExporterService, IgxCsvExporterService,AuthGuardService,AuthServiceService],
   bootstrap: [AppComponent],
   entryComponents :[LoginComponent]
 })

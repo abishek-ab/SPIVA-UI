@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
   }
 
   addRow(message){
-    console.log(this.newEmployee);
+    console.log(location.origin);
     this.employeeService.addNewEmployee(new Employee(0,this.newEmployee.firstName,this.newEmployee.department)).subscribe(
       (data:Employee[])=>{
         this.loadAllEmployees();
