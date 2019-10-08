@@ -60,6 +60,7 @@ export class HomeComponent implements OnInit {
     this.snackBar.open(message, '', {
       duration: 2000,
       verticalPosition: 'top',
+      panelClass: 'success-notification-overlay'
     });
   }
 
@@ -72,10 +73,11 @@ export class HomeComponent implements OnInit {
     row.delete();
  }
  openSnackBar(message) {
-   this.onSave();
+   //this.onSave();
   this.snackBar.open(message, '', {
     duration: 2000,
     verticalPosition: 'top',
+    panelClass: 'success-notification-overlay'
   });
 }
 

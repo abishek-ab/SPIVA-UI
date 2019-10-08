@@ -1,7 +1,52 @@
-  <section class="hero" [ngStyle]="{'background-image': getUrl()}">"
-<app-header></app-header>
-  <router-outlet></router-outlet>
-<app-footer></app-footer>
- </section> 
+<section class="hero" [ngStyle]="{'background-image': getUrl()}">
+
+    <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+        <!-- <mat-toolbar color="primary" class="example-toolbar">
+          <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+          <h1 class="example-app-name">Responsive App</h1>
+        </mat-toolbar> -->
+
+        <app-header (toggle)="toggleFromHeader($event)"></app-header>
+      
+        <mat-sidenav-container class="example-sidenav-container"
+                               [style.marginTop.px]="mobileQuery.matches ? 56 : 56">
+          <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list>
+                    <mat-toolbar  style="background-color: white">  
+                  <mat-toolbar-row (click)="toggleMenu()">
+                   <mat-icon>home</mat-icon> &nbsp;Forms
+                  </mat-toolbar-row>
+                
+                  <mat-toolbar-row (click)="toggleMenu(2)">
+                    <mat-icon>person</mat-icon> &nbsp;Employee Details
+                  </mat-toolbar-row>
+                
+                    <mat-toolbar-row (click)="toggleMenu()">
+                    <mat-icon>dashboard</mat-icon>&nbsp; Dashboard
+                  </mat-toolbar-row>
+                
+                    <mat-toolbar-row (click)="toggleMenu()">
+                    <mat-icon>settings</mat-icon>&nbsp; Settings
+                  </mat-toolbar-row>
+                
+                </mat-toolbar>
+            </mat-nav-list>
+          </mat-sidenav>
+      
+          <mat-sidenav-content>
+           
+            <router-outlet></router-outlet >
+              <app-footer ></app-footer  >
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      </div>
+
+        
+        <!-- <app-header></app-header> -->
+       
+   
 
 
+ 
+</section>

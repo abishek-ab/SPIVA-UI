@@ -32,7 +32,7 @@
             </igx-column> -->
         <!-- <igx-column field="OrderDate" [dataType]="'date'"></igx-column> -->
         <!-- <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'"></igx-column> -->
-        <igx-column width="100px" [filterable]="false">
+        <igx-column width="100px" [filterable]="false" header="Delete">
                 <ng-template igxCell let-cell="cell">
                     <button igxButton="icon" (click)="removeRow(cell.cellID.rowIndex)">
                         <igx-icon>delete</igx-icon>

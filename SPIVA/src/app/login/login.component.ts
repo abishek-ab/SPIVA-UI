@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     onLogin(){
       this._bottomSheetRef.dismiss();
       this.authService.login();
-      this.router.navigateByUrl("/home");
+     // this.router.navigateByUrl("/home");
     }
 
     

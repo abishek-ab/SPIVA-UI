@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 import { LoginComponent } from 'src/app/login/login.component';
 import { AuthServiceService } from 'src/app/auth/auth-service.service';
@@ -9,6 +9,7 @@ import { AuthServiceService } from 'src/app/auth/auth-service.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() toggle=new EventEmitter();
   constructor(private _bottomSheet: MatBottomSheet,private authService:AuthServiceService) { }
 
   loginStatus;
@@ -28,5 +29,10 @@ export class HeaderComponent implements OnInit {
   onLogOut(){
     this.authService.logout();
   }
+  
+  toggleSideNav(){
+    this.toggle.emit(true);
+  }
+
 
 }

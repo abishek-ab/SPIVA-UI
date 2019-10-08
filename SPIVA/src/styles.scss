@@ -2,12 +2,16 @@
 // @import '~minireset.css/minireset';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '~igniteui-angular/lib/core/styles/themes/index';
+$primary-color: #673ab7;
 @include igx-core();
-@include igx-theme($default-palette);
+@include igx-theme($primary-color);
 @import '~@angular/material/_theming.scss';
 @include mat-core();
 
 $default-theme: mat-light-theme(mat-palette($mat-green, A400), mat-palette($mat-light-blue, A400));
+
+
+
 
 
 
