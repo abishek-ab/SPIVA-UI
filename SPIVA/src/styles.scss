@@ -5,10 +5,10 @@
 $primary-color: #673ab7;
 @include igx-core();
 @include igx-theme($primary-color);
-@import '~@angular/material/_theming.scss';
-@include mat-core();
+//@import '~@angular/material/_theming.scss';
+//@include mat-core();
 
-$default-theme: mat-light-theme(mat-palette($mat-green, A400), mat-palette($mat-light-blue, A400));
+//$default-theme: mat-light-theme(mat-palette($mat-green, A400), mat-palette($mat-light-blue, A400));
 
 
 
@@ -35,6 +35,88 @@ $default-theme: mat-light-theme(mat-palette($mat-green, A400), mat-palette($mat-
     margin: 16px;
     min-width: 400px;
     padding-left: 90px;
+}
+
+.sample-wrapper {
+    width: inherit;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    background: transparent;
+}
+
+
+.sample-title {
+    color: #673ab7;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.sample-title .light {
+    font-weight: 400;
+}
+
+.sample-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #717171;
+}
+
+@-webkit-keyframes color-change-2x {
+    0% {
+        background: #fdf8f0;
+    }
+    100% {
+        background: #f6e7ec;
+    }
+}
+
+@keyframes color-change-2x {
+    0% {
+        background: #fdf8f0;
+    }
+    100% {
+        background: #f6e7ec;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.headerAlignSyle {
+    text-align: right !important;
+}
+
+$green-palette: igx-palette($primary: #673ab7,$secondary: #72da67, $surface: #333);
+
+.fin-dark-theme {
+    @include igx-dark-theme($green-palette);
+     background: #333;
+
+     ::-moz-placeholder {
+         opacity: 1;
+     }
+ }
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+    @include igx-dark-theme($green-palette);
 }
 
 

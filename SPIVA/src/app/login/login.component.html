@@ -2,32 +2,35 @@
 <br><br>
 <mat-nav-list>
     <div class="container">
+        <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-sm-12">
+                    <input id="id" type="number" formControlName="id" hidden/>
                 <igx-input-group>
                     <igx-prefix>
                         <igx-icon>person</igx-icon>
                     </igx-prefix>
                     <label igxLabel for="username">Username</label>
-                    <input igxInput id="username" type="text" [(ngModel)]="username"/>
+                    <input igxInput id="username" type="text" formControlName="username"/>
                 </igx-input-group>
                 <igx-input-group>
                     <igx-prefix>
                         <igx-icon>lock</igx-icon>
                     </igx-prefix>
                     <label igxLabel>Password</label>
-                    <input igxInput id="password" type="password" [(ngModel)]="password"/>
+                    <input igxInput id="password" type="password" formControlName="password"/>
                 </igx-input-group>
                 <br><br>
-                <button igxButton (click)="openLink()">Cancel</button>
-                <button igxButton (click)="onLogin()">SignIn</button>
+                <button  mat-button color="primary" type="button" (click)="openLink()" ><strong>Cancel</strong></button> | 
+                <button  mat-button color="primary" type="submit" [disabled]="!authForm.valid"><strong>SignIn</strong></button>
             </div>
         </div>
-        <div class="row">
+    </form>
+        <!-- <div class="row">
             <div class="col-sm-12">
 
             </div>
-        </div>
+        </div> -->
     </div>
 </mat-nav-list>
 <br><br><br>

@@ -9,16 +9,16 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IgxAvatarModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxDividerModule, IgxRippleModule, IgxChipsModule,
-   IgxSliderModule, IgxListModule, IgxExpansionPanelModule,IgxInputGroupModule,IgxGridModule,IgxExcelExporterService, IgxCsvExporterService, IgxDialogModule  } from "igniteui-angular";
+   IgxSliderModule, IgxListModule, IgxExpansionPanelModule,IgxInputGroupModule,IgxGridModule,IgxExcelExporterService, IgxCsvExporterService, IgxDialogModule, IgxLayoutModule, IgxNavigationDrawerModule, IgxRadioModule, IgxSwitchModule, IgxToggleModule  } from "igniteui-angular";
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonsModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
 import { DashboardTabsComponent } from './dashboard/dashboard-tabs/dashboard-tabs.component'
 import { AuthGuardService } from 'src/app/auth/auth-guard.service';
-import { AuthServiceService } from 'src/app/auth/auth-service.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -54,8 +54,14 @@ import { AuthServiceService } from 'src/app/auth/auth-service.service';
     ButtonsModule, 
     WavesModule, 
     CardsModule,
+    ReactiveFormsModule,
+    IgxLayoutModule,
+    IgxNavigationDrawerModule,
+    IgxRadioModule,
+    IgxSwitchModule,
+    IgxToggleModule
   ],
-  providers: [IgxExcelExporterService, IgxCsvExporterService,AuthGuardService,AuthServiceService],
+  providers: [IgxExcelExporterService, IgxCsvExporterService,AuthGuardService,AuthenticationService],
   bootstrap: [AppComponent],
   entryComponents :[LoginComponent]
 })

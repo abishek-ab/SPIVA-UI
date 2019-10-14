@@ -16,3 +16,37 @@
   a:hover {
     background-color: #4a185f;
   }
+
+  .main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+main.mini-padding {
+    padding: 0rem calc(1rem + 30px);
+}
+
+/* Sample styling */
+
+
+.igx-nav-drawer__aside::-webkit-scrollbar {
+    width: 3px;
+    background: #e4e4e4;
+}
+
+.igx-nav-drawer__aside::-webkit-scrollbar-thumb {
+    background: #673ab7;
+    border-radius: 0;
+}
+
+.content-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

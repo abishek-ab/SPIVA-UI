@@ -1,6 +1,11 @@
 .card-wrapper {
     max-width: 400px;
+    transition: transform .2s;
 }
+
+ .card-wrapper:hover {
+     transform: scale(1.05);
+ }
 .example-large-box {
     display: flex;
     align-items: center;
